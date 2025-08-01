@@ -1,30 +1,55 @@
-version: "3.8"
+#install Docker and docker compose plugins
+
+version: '3.9'
 
 services:
+  # 1: Create Mongodb service
+  mongodb:
+    image: mongo
+    container_name: mongodb_container
+    ports:
+      - "27017:27017"
+    networks:
+      - mongo-net
+    volumes:
+      - mongo_data:/data/db 
+
+  #2.frontend container
+  yolofrontend:
+    build: ./client
+    image:
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      MONGODB_URI: mongodb://mongodb
+      DBNAME: nixip2
+    depends_on:
+      - mongodb
+    networks:
+      - mongo-net
   
 
-  backend:
+
+  # 3. backend container 
+  yoloimage:
     build: ./backend
-    container_name: backend
+    image: evelyneakeyobackend:v1.0.0
+    
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/nixip2
     ports:
       - "5000:5000"
-    environment:
-      - MONGODB_URI=mongodb+srv://evelyneotieno:HrwEb_Rfh-C82wu@week3.jcvhbbq.mongodb.net/?retryWrites=true&w=majority&appName=week3
-    networks:
-      - yolo-net
-
-  frontend:
-    build: ./client
-    container_name: frontend
-    ports:
-      - "3000:80"
     depends_on:
-      - backend
+      - mongodb
     networks:
-      - yolo-net
+      - mongo-net
+      
 
+volumes:
+  mongo_data:
 
-
+# network for communication
 networks:
-  yolo-net:
+  mongo-net:
     driver: bridge
