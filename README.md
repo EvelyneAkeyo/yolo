@@ -218,6 +218,3 @@ This project showcases the end-to-end automation of a full-stack web application
 * Streamlined container orchestration
 * Reproducible VM environment for development and testing
 
----
-
-If you want, I can now **transform this to match your Kubernetes deployment** so your Week 5 IP README looks unique but still covers all grading points. Would you like me to?
