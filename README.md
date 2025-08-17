@@ -1,4 +1,4 @@
-🛒 YOLO E-Commerce Platform (Dockerized)
+🛒 YOLO E-Commerce platform (dockerized)
 
 This project is a **full-stack shopping platform** built using React for the frontend, Node.js with Express for the backend API, and MongoDB for data storage. The entire stack is containerized using Docker and managed with Docker Compose.
 
