@@ -1,4 +1,4 @@
-# Week 5 Kubernetes Project 🚀
+Week 5 Kubernetes project
 
 -----
 
