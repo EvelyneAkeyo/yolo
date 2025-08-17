@@ -9,6 +9,8 @@ This project demonstrates how to deploy a **full-stack application** on a Kubern
 * **Database (MongoDB)**
 
 The goal was to practice container orchestration, scaling, and service discovery in Kubernetes.
+__
+__
 
 2. Kubernetes resources used
 
@@ -72,6 +74,7 @@ Project overview
 This project was a good introduction to **real-world Kubernetes deployments**
 
 It showed how microservices can be deployed, scaled, and managed efficiently using Kubernetes
+
 
 
 
