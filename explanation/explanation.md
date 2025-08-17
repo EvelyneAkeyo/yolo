@@ -16,8 +16,8 @@ The goal was to practice container orchestration, scaling, and service discovery
 
 1. Deployment
 
-Used for the frontend and backend.
-Ensures the application runs with the desired number of replicas.
+Used for the frontend and backend
+Ensures the application runs with the desired number of replicas
 
 2. StatefulSet
 
@@ -26,7 +26,7 @@ Provides stable network identity and persistent storage.
 
 3. PersistentVolumeClaim (PVC)
 
-   * Ensures MongoDB data is stored even if pods restart.
+   Ensures MongoDB data is stored even if pods restart.
 
 4. Service
 
@@ -63,5 +63,6 @@ Project overview
 
 This project was a good introduction to **real-world Kubernetes deployments**.
 It showed how microservices can be deployed, scaled, and managed efficiently using Kubernetes.
+
 
 
