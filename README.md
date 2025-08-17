@@ -79,7 +79,7 @@ All components are deployed inside Docker containers on a **provisioned Ubuntu 2
 
 ---
 
-## 📂 Project layout
+📂 Project layout
 
 ```
 project-root/
@@ -99,9 +99,9 @@ project-root/
 
 ---
 
-## 🛠️ Vagrant setup
+🛠️ Vagrant setup
 
-The **Vagrantfile** provisions the VM, forwards necessary ports, and triggers the Ansible playbook.
+The **Vagrantfile provisions the VM, forwards necessary ports, and triggers the Ansible playbook.
 
 ```ruby
 config.vm.box = "geerlingguy/ubuntu2004"
@@ -119,12 +119,11 @@ end
 
 ---
 
-## 📋 Ansible Playbook Structure
-
-**Step 1 – Clone Repository**
+📋 Ansible playbook structure
+Step 1 – clone repository**
 Ensures Git is installed and the latest app code is pulled.
 
-**Step 2 – Create Docker Network**
+Step 2 – Create docker network**
 Sets up a custom bridge network so MongoDB, backend, and frontend can talk to each other:
 
 ```yaml
@@ -134,7 +133,7 @@ Sets up a custom bridge network so MongoDB, backend, and frontend can talk to ea
     state: present
 ```
 
-**Step 3 – Deploy Containers via Roles**
+Step 3 – Deploy containers via roles**
 Roles are used for:
 
 * MongoDB
@@ -143,7 +142,7 @@ Roles are used for:
 
 ---
 
-## 🔄 Containers and Images
+🔄 Containers and images
 
 | Container Name     | Image                          | Purpose       |
 | ------------------ | ------------------------------ | ------------- |
@@ -155,7 +154,7 @@ All are linked through the `app-net` Docker network.
 
 ---
 
-## 💾 Data Persistence
+💾 Data persistence
 
 MongoDB uses a volume:
 
@@ -168,7 +167,7 @@ This ensures data remains even if the MongoDB container is restarted or recreate
 
 ---
 
-## 🚀 How to Deploy
+🚀 How to deploy
 
 1. Start VM:
 
@@ -188,7 +187,7 @@ This ensures data remains even if the MongoDB container is restarted or recreate
 
 ---
 
-## 🌐 Access Points
+## 🌐 Access points
 
 | Component | Address                                        |
 | --------- | ---------------------------------------------- |
@@ -198,7 +197,7 @@ This ensures data remains even if the MongoDB container is restarted or recreate
 
 ---
 
-## 🧠 Git Workflow Example
+## 🧠 Git Workflow example
 
 ```bash
 git commit -m "Initial cleanup and setup"
